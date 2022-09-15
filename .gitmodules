@@ -1,0 +1,3 @@
+[submodule "somax2"]
+	path = somax2
+	url = https://github.com/DYCI2/Somax2.git
