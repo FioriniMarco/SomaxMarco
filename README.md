@@ -1,2 +1,2 @@
 # SomaxMarco
-Personal repository for internship 
+Personal repository of internship project at IRCAM
