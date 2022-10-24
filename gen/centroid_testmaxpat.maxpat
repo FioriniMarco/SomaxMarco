@@ -226,7 +226,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 492.0, 620.0, 419.0, 118.0 ],
-					"setminmax" : [ 0.0, 30.0 ],
+					"setminmax" : [ 0.0, 7.0 ],
 					"setstyle" : 5,
 					"varname" : "multislider"
 				}
@@ -440,7 +440,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal" ],
 					"patching_rect" : [ 57.0, 145.0, 177.0, 23.0 ],
-					"text" : "pfft~ gen~.centroid_test 1024 4"
+					"text" : "pfft~ gen~.centroid_test 1024 2"
 				}
 
 			}
@@ -610,19 +610,6 @@
 
 			}
  ],
-		"parameters" : 		{
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "drumLoop.aif",
 				"bootpath" : "C74:/media/msp",
@@ -631,7 +618,7 @@
 			}
 , 			{
 				"name" : "gen~.centroid_test.maxpat",
-				"bootpath" : "~/Desktop",
+				"bootpath" : "~/Documents/GitHub/SomaxMarco/gen",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
