@@ -40,48 +40,68 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-101",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 557.0, 1804.0, 88.0, 22.0 ],
-					"text" : "count~ 0 512 1"
+					"buffername" : "forparam",
+					"id" : "obj-122",
+					"maxclass" : "waveform~",
+					"numinlets" : 5,
+					"numoutlets" : 6,
+					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
+					"patching_rect" : [ 873.0, 3044.0, 256.0, 64.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-99",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 0,
-					"patching_rect" : [ 514.0, 1840.0, 90.0, 22.0 ],
-					"text" : "poke~ onsetDF"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-97",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 617.0, 1761.0, 63.0, 22.0 ],
-					"text" : "+~ 0.0001"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-20",
+					"id" : "obj-111",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 617.0, 1732.0, 35.0, 22.0 ],
-					"text" : "abs~"
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 845.0, 2973.0, 165.0, 22.0 ],
+					"text" : "buffer~ forparam @samps 30"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-105",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 707.0, 3293.0, 56.0, 22.0 ],
+					"text" : "capture~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-97",
+					"maxclass" : "number~",
+					"mode" : 2,
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "float" ],
+					"patching_rect" : [ 603.666666666666742, 3020.0, 132.0, 22.0 ],
+					"sig" : 0.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-20",
+					"maxclass" : "number~",
+					"mode" : 2,
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "float" ],
+					"patching_rect" : [ 490.666666666666686, 3020.0, 45.0, 22.0 ],
+					"sig" : 0.0
 				}
 
 			}
@@ -386,7 +406,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 204.0, 87.0, 1322.0, 779.0 ],
+						"rect" : [ 254.0, 132.0, 974.0, 779.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -581,13 +601,13 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "addSampleToEnd(v, buffer, writeIndex)\r\n{\r\n\tpoke(buffer, v, writeIndex);\r\n\twriteIndex = ((writeIndex + 1) % dim(buffer));\r\n\treturn writeIndex;\r\n}\r\n\r\n// buffers\r\nBuffer onsetDF(\"onsetDF\");\r\nBuffer w1(\"w1\");\r\nBuffer cumulativeScore(\"cumulativeScore\");\r\nBuffer futureCumulativeScore(\"futureCumulativeScore\");\r\nBuffer w2(\"w2\");\r\nBuffer debug(\"debug\"); // DEBUG buffer\r\nBuffer frame(\"frame\");\r\nHistory m0(10);\r\nHistory writeIndexOnsetDF(0);\r\nHistory beatCounter(-1);\r\n\r\n// parameters as inputs\r\nsample = in1;\r\n//m0 = in2;\r\n//beatCounter = in3;\r\nonsetDFBufferSize = in4;\r\nhopSize = in5;\r\ntempo = in6;\r\ntightness = in7;\r\nalpha = in8;\r\nbeatPeriod = in9;\r\nbeatDueInFrame = in10;\r\nwriteIndexOnsetDF = in11;\r\nwriteIndexCumulativeScore = in12;\r\nlatestCumulativeScoreValue = in13;\r\n\r\n\r\n//m0test = m0;\r\n// DEBUG buffer info\r\ndebug_dim = dim(debug);\ndebug_chans = channels(debug);\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// processOnsetDetecntionFunctionSample(newSample)\r\n\r\n\r\npeekedSample = peek(frame, 1);\r\n\r\n// we need to ensure that the onset\n// detection function sample is positive\nnewSample = abs (peekedSample);\n    \n// add a tiny constant to the sample to stop it from ever going\n// to zero. this is to avoid problems further down the line\nnewSample = newSample + 0.0001;\r\n\r\nm0-=1;\r\nbeatCounter -=1;\r\n\r\n\r\n/** A circular buffer that allows you to add new samples to the end\n * whilst removing them from the beginning. This is implemented in an\n * efficient way which doesn't involve any memory allocation\n */\r\n\r\n// add new sample at the end\r\n/*\r\npoke(onsetDF, newSample, writeIndexOnsetDF);\r\nwriteIndexOnsetDF = ((writeIndexOnsetDF + 1) % dim(onsetDF));\r\n*/\r\n\r\n\r\n// DEBUG segment\r\nmy_counter = counter(1, 0, debug_dim);\npoke(debug, m0, my_counter);\r\n///////////////////////////////\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// updateCumulativeScore(odfSample)\r\n\r\n//Updates the cumulative score function with a new onset detection function sample\r\nstart = onsetDFBufferSize - round(2*beatPeriod);\r\nend = onsetDFBufferSize - round(beatPeriod/2);\r\nwinsize = end-start+1;\r\n\r\nv = -2*beatPeriod;\r\nwcumscore = 0;\r\nout2 = winsize; // don't delete it\r\n// fill window1\r\nfor (i = 0; i < winsize; i+=1)\r\n{\r\n\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t//w1_counter = counter(1, 0, winsize);\r\n\tpoke(w1, valueToPoke, i);\r\n\tv = v+1;\r\n}\r\n\r\n// calculate new cumulative score value\r\nmax = 0;\r\nn = 0;\r\nfor (i = start; i <= end; i += 1)\r\n{\r\n\twcumscore1 = peek(cumulativeScore, i);\r\n\twcumscore2 = peek(w1, n);\r\n\twcumscore = wcumscore1*wcumscore2;\r\n\r\n\tif (wcumscore2 > max)\r\n\t{\r\n\t\tmax = wcumscore2;\r\n\t}\r\n\tn+=1;\r\n}\r\n\r\nlatestCumulativeScoreValue = ((1 - alpha) * newSample) + (alpha * max);\r\n\r\n// add new sample at the end\r\npoke(cumulativeScore, latestCumulativeScoreValue, writeIndexCumulativeScore);\r\nwriteIndexCumulativeScore = ((writeIndexCumulativeScore + 1) % dim(cumulativeScore));\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// predictBeat()\r\n\r\n// if we are halfway between beats\nif (m0 == 0)\n{\n\t//predictBeat();\n\t\r\n\t\r\n\twindowSize = beatPeriod;\r\n\t\r\n\tfor (i = 0; i < onsetDFBufferSize; i+=1)\r\n\t{\r\n\t\tpeekValue = peek(cumulativeScore, i);\r\n\t\tfcs_counter = counter(1, 0, dim(futureCumulativeScore));\r\n\t\tpoke(futureCumulativeScore, peekValue, i);\r\n\t}\r\n\r\n\t// create future window\r\n\tv = 1;\r\n\t\r\n\tfor (i = 0; i < beatPeriod; i+=1)\r\n\t{ \t\r\n\t\tvalueToPoke = exp((-1*pow((v - (beatPeriod/2)),2))   /  (2*pow((beatPeriod/2) ,2)));\r\n\t\t//w2_counter = counter(1, 0, dim(w2));\r\n\t\tpoke(w2, valueToPoke, i);\r\n\t\tv+=1;\r\n\t}\r\n\r\n\t// create past window\r\n\tv = -2*beatPeriod;\r\n\tstart = onsetDFBufferSize - round(2*beatPeriod);\n\tend = onsetDFBufferSize - round(beatPeriod/2);\n\tpastwinsize = end-start+1;\n\tout2 = winsize; // don't delete it\r\n\t\r\n\tfor (i = 0; i < winsize; i+=1)\r\n\t{\r\n\t\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t\t//w1_counter = counter(1, 0, winsize);\r\n\t\tpoke(w1, valueToPoke, i);\r\n\t\tv = v+1;\r\n\t}\r\n\t\r\n\t// calculate future cumulative score\r\n\tmax = 0;\r\n\tn = 0;\r\n\twcumscore = 0;\r\n\tfor (i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\tstart = i - round (2*beatPeriod);\n\t\tend = i - round (beatPeriod/2);\n\t\t\n\t\tmax = 0;\n\t\tn = 0;\r\n\t\tfor(k = start; k <= end; k+=1)\r\n\t\t{\r\n\t\t\twcumscore1 = peek(futureCumulativeScore, k);\r\n\t\t\twcumscore2 = peek(w1, n);\r\n\t\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\t\r\n\t\t\tif(wcumscore > max)\r\n\t\t\t{\r\n\t\t\t\tmax = wcumscore;\r\n\t\t\t}\r\n\t\t\tn+=1;\r\n\t\t}\r\n\t\t\r\n\t\tpoke(futureCumulativeScore, max, i);\r\n\t}\r\n\t\r\n\t\r\n\t// predict beat\r\n\tmax = 0;\r\n\tn = 0;\r\n\t\r\n\tfor(i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\twcumscore1 = peek(futureCumulativeScore, i);\r\n\t\twcumscore2 = peek(w2, n);\r\n\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\r\n\t\tif(wcumscore > max)\r\n\t\t{\t\r\n\t\t\tmax = wcumscore;\r\n\t\t\tbeatCounter = n;\r\n\t\t}\r\n\t\tn+=1;\r\n\t}\r\n\t\r\n\t// set the prediction time\r\n\tm0 = beatCounter + round(beatPeriod / 2);\r\n\t\t\r\n}\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// if we are at a beat\r\nif(beatCounter <= 0)\r\n{\r\n\tbeatDueInFrame = 1; // 1 = true;\r\n\t// recalculate the tempo\n\t//resampleOnsetDetectionFunction();\n\t//calculateTempo();\r\n\t\r\n\r\n}\r\n\r\n\r\n\r\n\t\r\nout3 = beatDueInFrame;\r\nout1 = newSample;\r\n\r\n\r\n",
+									"code" : "addSampleToEnd(v, buffer, writeIndex)\r\n{\r\n\tpoke(buffer, v, writeIndex);\r\n\twriteIndex = ((writeIndex + 1) % dim(buffer));\r\n\treturn writeIndex;\r\n}\r\n\r\n// buffers\r\nBuffer onsetDF(\"onsetDF\");\r\nBuffer w1(\"w1\");\r\nBuffer cumulativeScore(\"cumulativeScore\");\r\nBuffer futureCumulativeScore(\"futureCumulativeScore\");\r\nBuffer w2(\"w2\");\r\nBuffer debug(\"debug\"); // DEBUG buffer\r\nBuffer frame(\"frame\");\r\n\r\nHistory m0(10);\r\nHistory beatCounter(-1);\r\nHistory onsetDFBufferSize(512);\r\nHistory hopSize(512);\r\nHistory tempo(120);\r\nHistory tightness(5);\r\nHistory alpha(0.9);\r\nHistory beatPeriod(43);\r\nHistory beatDueInFrame(0);\r\nHistory writeIndexOnsetDF(0);\r\nHistory writeIndexCumulativeScore(0);\r\nHistory latestCumulativeScore(0);\r\n\r\n\r\n// parameters as inputs\r\nsample = in1;\r\n/*m0 = in2;\r\nbeatCounter = in3;\r\nonsetDFBufferSize = in4;\r\nhopSize = in5;\r\ntempo = in6;\r\ntightness = in7;\r\nalpha = in8;\r\nbeatPeriod = in9;\r\nbeatDueInFrame = in10;\r\nwriteIndexOnsetDF = in11;\r\nwriteIndexCumulativeScore = in12;\r\nlatestCumulativeScoreValue = in13;\r\n*/\r\n\r\n//m0test = m0;\r\n// DEBUG buffer info\r\ndebug_dim = dim(debug);\ndebug_chans = channels(debug);\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// processOnsetDetecntionFunctionSample(newSample)\r\n\r\n\r\npeekedSample = peek(frame, 1);\r\n\r\n// we need to ensure that the onset\n// detection function sample is positive\nnewSample = abs (peekedSample);\n    \n// add a tiny constant to the sample to stop it from ever going\n// to zero. this is to avoid problems further down the line\nnewSample = newSample + 0.0001;\r\n\r\nm0-=1;\r\nbeatCounter -=1;\r\n\r\n\r\n/** A circular buffer that allows you to add new samples to the end\n * whilst removing them from the beginning. This is implemented in an\n * efficient way which doesn't involve any memory allocation\n */\r\n\r\n// add new sample at the end\r\n/*\r\npoke(onsetDF, newSample, writeIndexOnsetDF);\r\nwriteIndexOnsetDF = ((writeIndexOnsetDF + 1) % dim(onsetDF));*/\r\nonsetDFCounter = counter(1, 0, onsetDFBufferSize);\r\npoke(onsetDF, newSample, onsetDFCounter);\r\n\r\nout3 = writeIndexOnsetDF;\r\n\r\n\r\n\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// updateCumulativeScore(odfSample)\r\n\r\n//Updates the cumulative score function with a new onset detection function sample\r\nstart = onsetDFBufferSize - round(2*beatPeriod);\r\nend = onsetDFBufferSize - round(beatPeriod/2);\r\nwinsize = end-start+1;\r\n\r\nv = -2*beatPeriod;\r\nwcumscore = 0;\r\nout2 = winsize; // don't delete it\r\n// fill window1\r\nfor (i = 0; i < winsize; i+=1)\r\n{\r\n\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t//w1_counter = counter(1, 0, winsize);\r\n\tpoke(w1, valueToPoke, i);\r\n\tv = v+1;\r\n}\r\n\r\n// calculate new cumulative score value\r\nmax = 0;\r\nn = 0;\r\nfor (i = start; i <= end; i += 1)\r\n{\r\n\twcumscore1 = peek(cumulativeScore, i);\r\n\twcumscore2 = peek(w1, n);\r\n\twcumscore = wcumscore1*wcumscore2;\r\n\r\n\tif (wcumscore2 > max)\r\n\t{\r\n\t\tmax = wcumscore2;\r\n\t}\r\n\tn+=1;\r\n}\r\n\r\nlatestCumulativeScoreValue = ((1 - alpha) * newSample) + (alpha * max);\r\n\r\n// add new sample at the end\r\npoke(cumulativeScore, latestCumulativeScoreValue, writeIndexCumulativeScore);\r\nwriteIndexCumulativeScore = ((writeIndexCumulativeScore + 1) % dim(cumulativeScore));\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// predictBeat()\r\n\r\n// if we are halfway between beats\nif (m0 <= 0)\n{\n\t//predictBeat();\n\t\r\n\t\r\n\twindowSize = beatPeriod;\r\n\t\r\n\tfor (i = 0; i < onsetDFBufferSize; i+=1)\r\n\t{\r\n\t\tpeekValue = peek(cumulativeScore, i);\r\n\t\tfcs_counter = counter(1, 0, dim(futureCumulativeScore));\r\n\t\tpoke(futureCumulativeScore, peekValue, i);\r\n\t}\r\n\r\n\t// create future window\r\n\tv = 1;\r\n\t\r\n\tfor (i = 0; i < beatPeriod; i+=1)\r\n\t{ \t\r\n\t\tvalueToPoke = exp((-1*pow((v - (beatPeriod/2)),2))   /  (2*pow((beatPeriod/2) ,2)));\r\n\t\t//w2_counter = counter(1, 0, dim(w2));\r\n\t\tpoke(w2, valueToPoke, i);\r\n\t\tv+=1;\r\n\t}\r\n\r\n\t// create past window\r\n\tv = -2*beatPeriod;\r\n\tstart = onsetDFBufferSize - round(2*beatPeriod);\n\tend = onsetDFBufferSize - round(beatPeriod/2);\n\tpastwinsize = end-start+1;\n\tout2 = winsize; // don't delete it\r\n\t\r\n\tfor (i = 0; i < winsize; i+=1)\r\n\t{\r\n\t\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t\t//w1_counter = counter(1, 0, winsize);\r\n\t\tpoke(w1, valueToPoke, i);\r\n\t\tv = v+1;\r\n\t}\r\n\t\r\n\t// calculate future cumulative score\r\n\tmax = 0;\r\n\tn = 0;\r\n\twcumscore = 0;\r\n\tfor (i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\tstart = i - round (2*beatPeriod);\n\t\tend = i - round (beatPeriod/2);\n\t\t\n\t\tmax = 0;\n\t\tn = 0;\r\n\t\tfor(k = start; k <= end; k+=1)\r\n\t\t{\r\n\t\t\twcumscore1 = peek(futureCumulativeScore, k);\r\n\t\t\twcumscore2 = peek(w1, n);\r\n\t\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\t\r\n\t\t\tif(wcumscore > max)\r\n\t\t\t{\r\n\t\t\t\tmax = wcumscore;\r\n\t\t\t}\r\n\t\t\tn+=1;\r\n\t\t}\r\n\t\t\r\n\t\tpoke(futureCumulativeScore, max, i);\r\n\t}\r\n\t\r\n\t\r\n\t// predict beat\r\n\tmax = 0;\r\n\tn = 0;\r\n\t\r\n\tfor(i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\twcumscore1 = peek(futureCumulativeScore, i);\r\n\t\twcumscore2 = peek(w2, n);\r\n\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\r\n\t\tif(wcumscore > max)\r\n\t\t{\t\r\n\t\t\tmax = wcumscore;\r\n\t\t\tbeatCounter = n;\r\n\t\t}\r\n\t\tn+=1;\r\n\t}\r\n\t\r\n\t// set the prediction time\r\n\tm0 = beatCounter + round(beatPeriod / 2);\r\n\t\t\r\n}\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// if we are at a beat\r\nif(beatCounter <= 0)\r\n{\r\n\tbeatDueInFrame = 1; // 1 = true;\r\n\t// recalculate the tempo\n\t//resampleOnsetDetectionFunction();\n\t//calculateTempo();\r\n\t\r\n\r\n}\r\n\r\n\r\n\r\n\t\r\n\r\nout1 = newSample;\r\n// DEBUG segment\r\nmy_counter = counter(1, 0, debug_dim);\npoke(debug, m0, my_counter);\r\n///////////////////////////////\r\n\r\n\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
 									"maxclass" : "codebox",
-									"numinlets" : 13,
+									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 50.0, 106.0, 848.0, 1030.0 ]
@@ -639,62 +659,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 6 ],
-									"source" : [ "obj-10", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 7 ],
-									"source" : [ "obj-11", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 8 ],
-									"source" : [ "obj-12", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 9 ],
-									"source" : [ "obj-13", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 11 ],
-									"source" : [ "obj-14", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 12 ],
-									"source" : [ "obj-17", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 1 ],
-									"source" : [ "obj-2", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 10 ],
-									"source" : [ "obj-3", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
 									"source" : [ "obj-5", 1 ]
 								}
@@ -711,34 +675,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
 									"source" : [ "obj-5", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 2 ],
-									"source" : [ "obj-6", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 3 ],
-									"source" : [ "obj-7", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 4 ],
-									"source" : [ "obj-8", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-5", 5 ],
-									"source" : [ "obj-9", 0 ]
 								}
 
 							}
@@ -1538,8 +1474,8 @@
 					"id" : "obj-131",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 5,
-					"outlettype" : [ "signal", "signal", "signal", "signal", "signal" ],
+					"numoutlets" : 7,
+					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -1551,7 +1487,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 1265.0, -1210.0, 734.0, 881.0 ],
+						"rect" : [ 805.0, 91.0, 584.0, 779.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1580,6 +1516,28 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 283.0, 713.0, 35.0, 22.0 ],
+									"text" : "out 7"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 510.0, 712.0, 35.0, 22.0 ],
+									"text" : "out 6"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-9",
 									"maxclass" : "newobj",
@@ -1625,15 +1583,15 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "History m0(10);\r\nHistory m1(10);\r\nHistory test(10);\r\nHistory value(10);\r\n\r\n\r\nm0-=1;\r\nif(m0==-1){\r\n\tm0 = 10;\r\n}\r\n\r\n// this will only do the -1 one time!\r\nm1in=in1;\r\nm1=m1in;\r\nm1-=1;\r\n\r\n// this will only do the -1 one time!\r\ntest=in1;\r\n\r\ntest-=1;\r\nout3 = test;\r\n\r\n\r\nvalueMiddle = value;\r\nvalueMiddle-=1;\r\n\r\nout1 = m0;\r\nout2 = m1;\r\n\r\nout4 = value;\r\nout5 = valueMiddle;",
+									"code" : "Buffer forparam(\"forparam\");\r\n\r\nHistory m0(10);\r\nHistory m1(10);\r\nHistory test(10);\r\nHistory value(10);\r\nHistory param(10);\r\n\r\n// History seems like the only way to do an endless loop\r\nm0=m0-1;\r\nmy_counter = counter(1, 0, dim(forparam));\r\npoke(forparam, m0, my_counter);\r\nif(m0==-1){\r\n\tm0 = 10;\r\n}\r\n\r\n// this will only do the -1 one time!\r\nm1in=in1;\r\nm1=m1in;\r\nm1-=1;\r\n\r\n// this will only do the -1 one time!\r\ntest=in1;\r\n\r\ntest-=1;\r\nout3 = test;\r\n\r\n//param = in1;\r\nfor(i=0; i<dim(forparam); i+=1){\r\n\tparam-=1;\r\n\t\r\n\tout7 = param;\r\n\tif(param<0){\r\n\t\tparam = 10;\r\n\t}\r\n}\r\n\r\n\r\nvalueMiddle = value;\r\nvalueMiddle-=1;\r\n\r\ntest2 = 10;\r\ntest2 -=1;\r\n\r\nout1 = m0;\r\nout2 = m1;\r\n\r\nout4 = value;\r\nout5 = valueMiddle;\r\nout6 = test2;\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
 									"maxclass" : "codebox",
 									"numinlets" : 1,
-									"numoutlets" : 5,
-									"outlettype" : [ "", "", "", "", "" ],
+									"numoutlets" : 7,
+									"outlettype" : [ "", "", "", "", "", "", "" ],
 									"patching_rect" : [ 97.0, 83.0, 432.0, 559.0 ]
 								}
 
@@ -1666,6 +1624,20 @@
 								"patchline" : 								{
 									"destination" : [ "obj-5", 0 ],
 									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-5", 5 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-5", 6 ]
 								}
 
 							}
@@ -2534,7 +2506,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ -236.0, -1199.0, 1146.0, 764.0 ],
+						"rect" : [ 84.0, 87.0, 731.0, 598.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3348,7 +3320,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 872.0, -1294.0, 1012.0, 956.0 ],
+						"rect" : [ 394.0, 87.0, 1012.0, 956.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3909,13 +3881,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-99", 1 ],
-					"source" : [ "obj-101", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-106", 0 ],
 					"midpoints" : [ 1319.0, 1847.0, 1319.0, 1847.0 ],
 					"order" : 1,
@@ -4054,6 +4019,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-105", 0 ],
+					"order" : 0,
+					"source" : [ "obj-131", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-133", 0 ],
 					"source" : [ "obj-131", 0 ]
 				}
@@ -4084,6 +4057,21 @@
 				"patchline" : 				{
 					"destination" : [ "obj-150", 0 ],
 					"source" : [ "obj-131", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-131", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-97", 0 ],
+					"order" : 1,
+					"source" : [ "obj-131", 6 ]
 				}
 
 			}
@@ -4293,7 +4281,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-165", 0 ],
-					"order" : 4,
+					"order" : 3,
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -4302,14 +4290,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-170", 0 ],
 					"order" : 1,
-					"source" : [ "obj-2", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"order" : 2,
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -4326,7 +4306,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"midpoints" : [ 127.75, 195.0, 222.5, 195.0 ],
-					"order" : 3,
+					"order" : 2,
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -4336,13 +4316,6 @@
 					"destination" : [ "obj-8", 0 ],
 					"midpoints" : [ 93.0, 198.0, 97.0, 198.0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-97", 0 ],
-					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -5027,13 +5000,6 @@
 					"destination" : [ "obj-104", 1 ],
 					"midpoints" : [ 1410.5, 1808.0, 1329.5, 1808.0 ],
 					"source" : [ "obj-96", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-99", 0 ],
-					"source" : [ "obj-97", 0 ]
 				}
 
 			}
