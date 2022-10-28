@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 442.0, 87.0, 956.0, 772.0 ],
+		"rect" : [ 85.0, 87.0, 1313.0, 772.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,162 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-167",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 598.0, 1324.0, 167.0, 22.0 ],
+					"text" : "buffer~ finalDelta @samps 41"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-149",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 598.0, 1287.0, 198.0, 22.0 ],
+					"text" : "buffer~ prevDeltaFixed @samps 41"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-142",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 598.0, 1250.0, 249.0, 22.0 ],
+					"text" : "buffer~ tempoObservationVector @samps 41"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-137",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1309.0, 1003.5, 189.0, 22.0 ],
+					"text" : "set x_treshCombFilterBankOutput"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-129",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 598.0, 1215.0, 292.0, 22.0 ],
+					"text" : "buffer~ x_threshCombFilterBankOutput @samps 128"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-128",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1153.0, 797.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-108",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 1123.0, 720.0, 33.0, 22.0 ],
+					"text" : "== 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-107",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1309.0, 964.0, 44.0, 22.0 ],
+					"text" : "set acf"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-105",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1309.0, 924.0, 147.0, 22.0 ],
+					"text" : "set combFilterBankOutput"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-101",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1307.5, 889.5, 122.0, 22.0 ],
+					"text" : "set x_threshOnsetDF"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-97",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 598.0, 1178.0, 140.0, 22.0 ],
+					"text" : "buffer~ acf @samps 512"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-95",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 598.0, 1145.0, 243.0, 22.0 ],
+					"text" : "buffer~ combFilterBankOutput @samps 128"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 598.0, 1106.0, 218.0, 22.0 ],
+					"text" : "buffer~ x_threshOnsetDF @samps 512"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-208",
 					"maxclass" : "newobj",
@@ -228,7 +384,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 910.0, 1032.5, 169.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "latestCumulativeScoreValue"
 				}
 
@@ -306,7 +461,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 910.0, 834.0, 150.0, 20.0 ],
-					"text" : "alpha"
+					"text" : "estimatedTempo"
 				}
 
 			}
@@ -317,7 +472,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 910.0, 807.0, 150.0, 20.0 ],
-					"text" : "tightness"
+					"text" : "maxind"
 				}
 
 			}
@@ -1206,7 +1361,7 @@
 				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "newobj",
-					"numinlets" : 7,
+					"numinlets" : 10,
 					"numoutlets" : 19,
 					"outlettype" : [ "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float", "float" ],
 					"patcher" : 					{
@@ -1220,7 +1375,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 369.0, 87.0, 1005.0, 760.0 ],
+						"rect" : [ 91.0, 87.0, 1283.0, 760.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1250,12 +1405,48 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-28",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1038.0, 26.0, 35.0, 22.0 ],
+									"text" : "in 10"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 933.333333333333371, 26.0, 28.0, 22.0 ],
+									"text" : "in 9"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 825.666666666666629, 26.0, 28.0, 22.0 ],
+									"text" : "in 8"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-30",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 990.0, 97.0, 28.0, 22.0 ],
+									"patching_rect" : [ 718.0, 26.0, 28.0, 22.0 ],
 									"text" : "in 7"
 								}
 
@@ -1267,7 +1458,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 917.0, 26.0, 28.0, 22.0 ],
+									"patching_rect" : [ 610.333333333333371, 31.0, 28.0, 22.0 ],
 									"text" : "in 6"
 								}
 
@@ -1389,7 +1580,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 759.0, 26.0, 28.0, 22.0 ],
+									"patching_rect" : [ 502.666666666666742, 31.0, 28.0, 22.0 ],
 									"text" : "in 5"
 								}
 
@@ -1445,7 +1636,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 650.25, 26.0, 28.0, 22.0 ],
+									"patching_rect" : [ 395.0, 31.0, 28.0, 22.0 ],
 									"text" : "in 4"
 								}
 
@@ -1479,7 +1670,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 457.5, 26.0, 28.0, 22.0 ],
+									"patching_rect" : [ 287.333333333333371, 26.0, 28.0, 22.0 ],
 									"text" : "in 3"
 								}
 
@@ -1491,7 +1682,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 264.75, 26.0, 28.0, 22.0 ],
+									"patching_rect" : [ 179.666666666666686, 35.0, 28.0, 22.0 ],
 									"text" : "in 2"
 								}
 
@@ -1520,16 +1711,16 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "addSampleToEnd(v, buffer, writeIndex)\r\n{\r\n\tpoke(buffer, v, writeIndex);\r\n\twriteIndex = ((writeIndex + 1) % dim(buffer));\r\n\treturn writeIndex;\r\n}\r\n\r\n// buffers\r\nBuffer onsetDF(\"onsetDF\");\r\nBuffer w1(\"w1\");\r\nBuffer cumulativeScore(\"cumulativeScore\");\r\nBuffer futureCumulativeScore(\"futureCumulativeScore\");\r\nBuffer w2(\"w2\");\r\nBuffer debug(\"debug\"); // DEBUG buffer\r\nBuffer frame(\"frame\");\r\nHistory m0(10);\r\nHistory beatCounter(-1);\r\nHistory writeIndexOnsetDF(0);\r\nHistory writeIndexCumulativeScore(0);\r\n\r\nonsetDFBufferSize = in1;\r\nbeatPeriod = in2;\r\ntightness = in3;\r\nalpha = in4;\r\nwinsize = in5;\r\nbeatDueInFrame = in6;\r\nsample = in7;\r\n\r\n\r\n// DEBUG buffer info\r\ndebug_dim = dim(debug);\ndebug_chans = channels(debug);\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// processOnsetDetecntionFunctionSample(newSample)\r\n\r\n\r\npeekedSample = peek(frame, 1);\r\n\r\n// we need to ensure that the onset\n// detection function sample is positive\nnewSample = abs (sample);\n    \n// add a tiny constant to the sample to stop it from ever going\n// to zero. this is to avoid problems further down the line\nnewSample = newSample + 0.0001;\r\n\r\nm0-=1;\r\nbeatCounter -=1;\r\n\r\n\r\n/** A circular buffer that allows you to add new samples to the end\n * whilst removing them from the beginning. This is implemented in an\n * efficient way which doesn't involve any memory allocation\n */\r\n\r\n// add new sample at the end\r\npoke(onsetDF, newSample, writeIndexOnsetDF);\r\nwriteIndexOnsetDF = ((writeIndexOnsetDF + 1) % dim(onsetDF));\r\n\r\n\r\n\r\n// DEBUG segment\r\nmy_counter = counter(1, 0, debug_dim);\npoke(debug, m0, my_counter);\r\n///////////////////////////////\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// updateCumulativeScore(odfSample)\r\n\r\n//Updates the cumulative score function with a new onset detection function sample\r\nstart = onsetDFBufferSize - round(2*beatPeriod);\r\nend = onsetDFBufferSize - round(beatPeriod/2);\r\nwinsize = end-start+1;\r\nv = -2*beatPeriod;\r\nwcumscore = 0;\r\n\r\n// fill window1\r\nfor (i = 0; i < winsize; i+=1)\r\n{\r\n\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t//w1_counter = counter(1, 0, winsize);\r\n\tpoke(w1, valueToPoke, i);\r\n\tv = v+1;\r\n}\r\n\r\n// calculate new cumulative score value\r\nmax = 0;\r\n\r\nn = 0;\r\nfor (i = start; i <= end; i += 1)\r\n{\r\n\twcumscore1 = peek(cumulativeScore, i);\r\n\twcumscore2 = peek(w1, n);\r\n\twcumscore = wcumscore1*wcumscore2;\r\n\r\n\r\n\tout18 = wcumscore1;\r\n\tout19 = wcumscore2;\r\n\r\n\r\n\tif (wcumscore2 > max)\r\n\t{\r\n\t\tmax = wcumscore2;\r\n\t}\r\n\tn+=1;\r\n}\r\n\r\nlatestCumulativeScoreValue = ((1 - alpha) * newSample) + (alpha * max);\r\n\r\n// add new sample at the end\r\npoke(cumulativeScore, latestCumulativeScoreValue, writeIndexCumulativeScore);\r\nwriteIndexCumulativeScore = ((writeIndexCumulativeScore + 1) % dim(cumulativeScore));\r\n\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// predictBeat()\r\n\r\n// if we are halfway between beats\nif (m0 == 0)\n{\n\t//predictBeat();\n\t\r\n\t\r\n\twindowSize = beatPeriod;\r\n\t\r\n\tfor (i = 0; i < onsetDFBufferSize; i+=1)\r\n\t{\r\n\t\tpeekValue = peek(cumulativeScore, i);\r\n\t\t//fcs_counter = counter(1, 0, dim(futureCumulativeScore));\r\n\t\tpoke(futureCumulativeScore, peekValue, i);\r\n\t}\r\n\r\n\t// create future window\r\n\tv = 1;\r\n\t\r\n\tfor (i = 0; i < beatPeriod; i+=1)\r\n\t{ \t\r\n\t\tvalueToPoke = exp((-1*pow((v - (beatPeriod/2)),2))   /  (2*pow((beatPeriod/2) ,2)));\r\n\t\t//w2_counter = counter(1, 0, dim(w2));\r\n\t\tpoke(w2, valueToPoke, i);\r\n\t\tv+=1;\r\n\t}\r\n\r\n\t// create past window\r\n\tv = -2*beatPeriod;\r\n\tstart = onsetDFBufferSize - round(2*beatPeriod);\n\tend = onsetDFBufferSize - round(beatPeriod/2);\n\tpastwinsize = end-start+1;\n\t\r\n\t\r\n\tfor (i = 0; i < winsize; i+=1)\r\n\t{\r\n\t\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t\t//w1_counter = counter(1, 0, winsize);\r\n\t\tpoke(w1, valueToPoke, i);\r\n\t\tv = v+1;\r\n\t}\r\n\t\r\n\t// calculate future cumulative score\r\n\tmax = 0;\r\n\tn = 0;\r\n\twcumscore = 0;\r\n\tfor (i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\tstart = i - round (2*beatPeriod);\n\t\tend = i - round (beatPeriod/2);\n\t\t\n\t\tmax = 0;\n\t\tn = 0;\r\n\t\tfor(k = start; k <= end; k+=1)\r\n\t\t{\r\n\t\t\twcumscore1 = peek(futureCumulativeScore, k);\r\n\t\t\twcumscore2 = peek(w1, n);\r\n\t\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\t\r\n\t\t\tif(wcumscore > max)\r\n\t\t\t{\r\n\t\t\t\tmax = wcumscore;\r\n\t\t\t}\r\n\t\t\tn+=1;\r\n\t\t}\r\n\t\t\r\n\t\tpoke(futureCumulativeScore, max, i);\r\n\t}\r\n\t\r\n\t\r\n\t// predict beat\r\n\tmax = 0;\r\n\tn = 0;\r\n\t\r\n\tfor(i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\twcumscore1 = peek(futureCumulativeScore, i);\r\n\t\twcumscore2 = peek(w2, n);\r\n\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\r\n\t\tif(wcumscore > max)\r\n\t\t{\t\r\n\t\t\tmax = wcumscore;\r\n\t\t\tbeatCounter = n;\r\n\t\t}\r\n\t\tn+=1;\r\n\t}\r\n\t\r\n\t// set the prediction time\r\n\tm0 = beatCounter + round(beatPeriod / 2);\r\n\t\r\n}\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// if we are at a beat\r\nif(beatCounter == 0)\r\n{\r\n\tbeatDueInFrame = 1; // 1 = true;\r\n\tout5 = beatDueInFrame;\r\n\t// recalculate the tempo\n\t//resampleOnsetDetectionFunction();\n\t//calculateTempo();\r\n\t\r\n\r\n}\r\n\r\n\r\n\r\nout1 = newSample;\r\nout2 = m0;\r\nout3 = beatCounter;\r\nout4 = writeIndexOnsetDF;\r\n\r\nout6 = onsetDFBufferSize;\r\nout7 = beatPeriod;\r\nout8 = tightness;\r\nout9= alpha;\r\nout10= start;\r\nout11 = end;\r\nout12 = v;\r\nout13 = wcumscore;\r\nout14=max;\r\nout15=n;\r\nout16=latestCumulativeScoreValue;\r\nout17 = writeIndexCumulativeScore;\r\n\r\n",
+									"code" : "addSampleToEnd(v, buffer, writeIndex)\r\n{\r\n\tpoke(buffer, v, writeIndex);\r\n\twriteIndex = ((writeIndex + 1) % dim(buffer));\r\n\treturn writeIndex;\r\n}\r\n\r\n\r\ncalculateMeanOfArray(array, startIndex, endIndex)\r\n{\r\n\ti;\n\tsum = 0;\n\n    length = endIndex - startIndex;\n\t\n\t// find sum\n\tfor (i = startIndex; i < endIndex; i+=1)\n\t{\r\n\t\tarrayValue = peek(array, i);\n\t\tsum = sum + arrayValue;\n\t}\n\t\n    if (length > 0)\n    {\n        return sum / length;\t// average and return\n    }\n    else\n    {\n        return 0;\n    }\r\n\t\r\n}\r\n\r\n\r\nadaptiveThreshold(x, N, x_thresh_)\r\n{\r\n\ti = 0;\r\n\tk = 0;\r\n\tt = 0;\r\n\tp_post = 7;\r\n\tp_pre = 8;\r\n\t\r\n\t\r\n\tt = min(N,p_post); // what is smaller, p_post of df size. This is to avoid accessing outside of arrays\r\n\t// find threshold for first 't' samples, where a full average cannot be computed yet \n\tfor (i = 0;i <= t;i+=1)\n\t{\t\n\t\tk = min ((i+p_pre),N);\r\n\t\tx_threshValue = calculateMeanOfArray(x,1,k);\r\n\t\tpoke(x_thresh_, x_threshValue, i);\n\t}\r\n\t\r\n\t// find threshold for bulk of samples across a moving average from [i-p_pre,i+p_post]\n\tfor (i = t+1;i < N-p_post;i+=1)\n\t{\r\n\t\tx_threshValue = calculateMeanOfArray (x,i-p_pre,i+p_post);\r\n\t\tpoke(x_thresh_,x_threshValue,i);\n\t}\r\n\t\r\n\t// for last few samples calculate threshold, again, not enough samples to do as above\n\tfor (i = N-p_post;i < N;i+=1)\n\t{\n\t\tk = max ((i-p_post),1);\r\n\t\tx_threshValue = calculateMeanOfArray (x,k,N);\r\n\t\tpoke(x_thresh_,x_threshValue,i);\n\t}\r\n\t\r\n\t// subtract the threshold from the detection function and check that it is not less than 0\n\tfor (i = 0; i < N; i+=1)\n\t{\r\n\t\txValue = peek(x, i);\r\n\t\tthreshValue = peek(x_thresh_, i);\r\n\t\tthreshOnsetValue = xValue - threshValue; // x[i] = x[i] - x_thresh[i];\n\t\n\t\tif (threshOnsetValue < 0)\n\t\t{\n\t\t\tthreshOnsetValue = 0;\n\t\t}\r\n\t\tpoke(x, threshOnsetValue, i);\n\t}\r\n\treturn 1;\r\n\t// functions in gen must always return a value!\r\n}\r\n\r\n\r\ncalculateOutputOfCombFilterBank(combFilterBankOutput_, acf_, weightingVector_)\n{\n\tfor (i = 0;i < 128;i+=1)\n\t{\r\n\t\tpoke(combFilterBankOutput_, 0, i);\n\t}\n\t\n\tnumelem = 4;\n\t\n\tfor (i = 2; i <= 127; i+=1) // max beat period\n\t{\n\t\tfor (a = 1; a <= numelem; a+=1) // number of comb elements\n\t\t{\n\t\t\tfor (b = 1-a; b <= a-1; b+=1) // general state using normalisation of comb elements\n\t\t\t{\r\n\t\t\t\tcombValue = peek(combFilterBankOutput_, i-1);\r\n\t\t\t\tacfValue = peek(acf_, ((a*i+b)-1));\r\n\t\t\t\tweightingValue = peek(weightingVector_, i-1);\r\n\t\t\t\tpoke(combFilterBankOutput_,(combValue + (acfValue*weightingValue)/(2*a-1)),i-1);\n\t\t\t\t// calculate value for comb filter row\n\t\t\t}\n\t\t}\n\t}\r\n\treturn 1;\n}\r\n\r\n\r\nnormaliseArray (array, N)\n{\n\tsum = 0;\n\t\n\tfor (i = 0; i < N; i+=1)\n\t{\r\n\t\tpeekedValue = peek(array, i);\n\t\tif (peekedValue  > 0)\n\t\t{\n\t\t\tsum = sum + peekedValue ;\n\t\t}\n\t}\n\t\n\tif (sum > 0)\n\t{\n\t\tfor (i = 0; i < N; i+=1)\n\t\t{\r\n\t\t\tpeekedValue = peek(array, i);\r\n\t\t\tpoke(array, peekedValue/sum, i); // array[i] = array[i] / sum;\n\t\t}\n\t}\r\n\treturn array;\n}\n\r\n\r\n\r\n// buffers\r\nBuffer onsetDF(\"onsetDF\");\r\nBuffer w1(\"w1\");\r\nBuffer cumulativeScore(\"cumulativeScore\");\r\nBuffer futureCumulativeScore(\"futureCumulativeScore\");\r\nBuffer w2(\"w2\");\r\nBuffer debug(\"debug\"); // DEBUG buffer\r\nBuffer frame(\"frame\");\r\nBuffer x_threshOnsetDF(\"x_threshOnsetDF\");\r\nBuffer combFilterBankOutput(\"combFilterBankOutput\");\r\nBuffer acf(\"acf\");\r\nBuffer weightingVector(\"weightingVector\");\r\nBuffer x_threshCombFilterBankOutput(\"x_threshCombFilterBankOutput\");\r\nBuffer tempoObservationVector(\"tempoObservationVector\");\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer prevDeltaFixed(\"prevDeltaFixed\");\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\nBuffer finalDelta(\"finalDelta\");\r\n\r\n// histories\r\nHistory m0(10);\r\nHistory beatCounter(-1);\r\nHistory writeIndexOnsetDF(0);\r\nHistory writeIndexCumulativeScore(0);\r\n\r\n// parameters from inputs\r\nonsetDFBufferSize = in1;\r\nbeatPeriod = in2;\r\ntightness = in3;\r\nalpha = in4;\r\nwinsize = in5;\r\nbeatDueInFrame = in6;\r\nsample = in7;\r\ntempoToLagFactor = in8;\r\ntempoFixed = in9;\r\nhopSize = in10;\r\n\r\n\r\n// DEBUG buffer info\r\ndebug_dim = dim(debug);\ndebug_chans = channels(debug);\r\n// DEBUG segment\r\nmy_counter = counter(1, 0, debug_dim);\npoke(debug, m0, my_counter);\r\n///////////////////////////////\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// processOnsetDetecntionFunctionSample(newSample)\r\n\r\n\r\npeekedSample = peek(frame, 1);\r\n\r\n// we need to ensure that the onset\n// detection function sample is positive\nnewSample = abs (sample);\n    \n// add a tiny constant to the sample to stop it from ever going\n// to zero. this is to avoid problems further down the line\nnewSample = newSample + 0.0001;\r\n\r\nm0-=1;\r\nbeatCounter -=1;\r\n\r\n\r\n/** A circular buffer that allows you to add new samples to the end\n * whilst removing them from the beginning. This is implemented in an\n * efficient way which doesn't involve any memory allocation\n */\r\n\r\n// add new sample at the end\r\npoke(onsetDF, newSample, writeIndexOnsetDF);\r\nwriteIndexOnsetDF = ((writeIndexOnsetDF + 1) % dim(onsetDF));\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// updateCumulativeScore(odfSample)\r\n\r\n//Updates the cumulative score function with a new onset detection function sample\r\nstart = onsetDFBufferSize - round(2*beatPeriod);\r\nend = onsetDFBufferSize - round(beatPeriod/2);\r\nwinsize = end-start+1;\r\nv = -2*beatPeriod;\r\nwcumscore = 0;\r\n\r\n// fill window1\r\nfor (i = 0; i < winsize; i+=1)\r\n{\r\n\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t//w1_counter = counter(1, 0, winsize);\r\n\tpoke(w1, valueToPoke, i);\r\n\tv = v+1;\r\n}\r\n\r\n// calculate new cumulative score value\r\nmax = 0;\r\n\r\nn = 0;\r\nfor (i = start; i <= end; i += 1)\r\n{\r\n\twcumscore1 = peek(cumulativeScore, i);\r\n\twcumscore2 = peek(w1, n);\r\n\twcumscore = wcumscore1*wcumscore2;\r\n\r\n\r\n\tout18 = wcumscore1;\r\n\tout19 = wcumscore2;\r\n\r\n\r\n\tif (wcumscore2 > max)\r\n\t{\r\n\t\tmax = wcumscore2;\r\n\t}\r\n\tn+=1;\r\n}\r\n\r\nlatestCumulativeScoreValue = ((1 - alpha) * newSample) + (alpha * max);\r\n\r\n// add new sample at the end\r\npoke(cumulativeScore, latestCumulativeScoreValue, writeIndexCumulativeScore);\r\nwriteIndexCumulativeScore = ((writeIndexCumulativeScore + 1) % dim(cumulativeScore));\r\n\r\n\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// predictBeat()\r\n\r\n// if we are halfway between beats\nif (m0 == 0)\n{\n\t//predictBeat();\n\t\r\n\t\r\n\twindowSize = beatPeriod;\r\n\t\r\n\tfor (i = 0; i < onsetDFBufferSize; i+=1)\r\n\t{\r\n\t\tpeekValue = peek(cumulativeScore, i);\r\n\t\t//fcs_counter = counter(1, 0, dim(futureCumulativeScore));\r\n\t\tpoke(futureCumulativeScore, peekValue, i);\r\n\t}\r\n\r\n\t// create future window\r\n\tv = 1;\r\n\t\r\n\tfor (i = 0; i < beatPeriod; i+=1)\r\n\t{ \t\r\n\t\tvalueToPoke = exp((-1*pow((v - (beatPeriod/2)),2))   /  (2*pow((beatPeriod/2) ,2)));\r\n\t\t//w2_counter = counter(1, 0, dim(w2));\r\n\t\tpoke(w2, valueToPoke, i);\r\n\t\tv+=1;\r\n\t}\r\n\r\n\t// create past window\r\n\tv = -2*beatPeriod;\r\n\tstart = onsetDFBufferSize - round(2*beatPeriod);\n\tend = onsetDFBufferSize - round(beatPeriod/2);\n\tpastwinsize = end-start+1;\n\t\r\n\t\r\n\tfor (i = 0; i < winsize; i+=1)\r\n\t{\r\n\t\tvalueToPoke = exp((-1 * pow (tightness * log (-v / beatPeriod), 2)) / 2);\r\n\t\t//w1_counter = counter(1, 0, winsize);\r\n\t\tpoke(w1, valueToPoke, i);\r\n\t\tv = v+1;\r\n\t}\r\n\t\r\n\t// calculate future cumulative score\r\n\tmax = 0;\r\n\tn = 0;\r\n\twcumscore = 0;\r\n\tfor (i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\tstart = i - round (2*beatPeriod);\n\t\tend = i - round (beatPeriod/2);\n\t\t\n\t\tmax = 0;\n\t\tn = 0;\r\n\t\tfor(k = start; k <= end; k+=1)\r\n\t\t{\r\n\t\t\twcumscore1 = peek(futureCumulativeScore, k);\r\n\t\t\twcumscore2 = peek(w1, n);\r\n\t\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\t\r\n\t\t\tif(wcumscore > max)\r\n\t\t\t{\r\n\t\t\t\tmax = wcumscore;\r\n\t\t\t}\r\n\t\t\tn+=1;\r\n\t\t}\r\n\t\t\r\n\t\tpoke(futureCumulativeScore, max, i);\r\n\t}\r\n\t\r\n\t\r\n\t// predict beat\r\n\tmax = 0;\r\n\tn = 0;\r\n\t\r\n\tfor(i = onsetDFBufferSize; i < (onsetDFBufferSize + windowSize); i+=1)\r\n\t{\r\n\t\twcumscore1 = peek(futureCumulativeScore, i);\r\n\t\twcumscore2 = peek(w2, n);\r\n\t\twcumscore = wcumscore1*wcumscore2;\r\n\t\t\r\n\t\tif(wcumscore > max)\r\n\t\t{\t\r\n\t\t\tmax = wcumscore;\r\n\t\t\tbeatCounter = n;\r\n\t\t}\r\n\t\tn+=1;\r\n\t}\r\n\t\r\n\t// set the prediction time\r\n\tm0 = beatCounter + round(beatPeriod / 2);\r\n\t\r\n}\r\n\r\n\r\n//_______________________________________________________________________________________________//\r\n// if we are at a beat, TO CHECK\r\nif(beatCounter == 0)\r\n{\r\n\tbeatDueInFrame = 1; // 1 = true;\r\n\tout5 = beatDueInFrame;\r\n\t// recalculate the tempo\r\n\t\r\n//_______________________________________________________________________________________________//\n\t//resampleOnsetDetectionFunction(); probably not needed, it just resample the buffers\r\n\t\n\t//calculateTempo();\r\n\t\r\n\t// adaptive threshold on input\r\n\t//adaptiveThreshold (resampledOnsetDF->onsetDF,512->N); adaptiveThreshold (double* x, int N)\r\n\tadaptiveThreshold(onsetDF, 512, x_threshOnsetDF);\r\n\t\n\t\r\n\t\r\n\t/*\r\n\ti = 0;\r\n\tk = 0;\r\n\tt = 0;\r\n\tp_post = 7;\r\n\tp_pre = 8;\r\n\tN = 512;\r\n\t\r\n\tt = min(N,p_post); // what is smaller, p_post of df size. This is to avoid accessing outside of arrays\r\n\t// find threshold for first 't' samples, where a full average cannot be computed yet \n\tfor (i = 0;i <= t;i+=1)\n\t{\t\n\t\tk = min ((i+p_pre),N);\r\n\t\tx_threshValue = calculateMeanOfArray(onsetDF,1,k);\r\n\t\tpoke(x_thresh, x_threshValue, i);\n\t}\r\n\t\r\n\t// find threshold for bulk of samples across a moving average from [i-p_pre,i+p_post]\n\tfor (i = t+1;i < N-p_post;i+=1)\n\t{\r\n\t\tx_threshValue = calculateMeanOfArray (onsetDF,i-p_pre,i+p_post);\r\n\t\tpoke(x_thresh,x_threshValue,i);\n\t}\r\n\t\r\n\t// for last few samples calculate threshold, again, not enough samples to do as above\n\tfor (i = N-p_post;i < N;i+=1)\n\t{\n\t\tk = max ((i-p_post),1);\r\n\t\tx_threshValue = calculateMeanOfArray (onsetDF,k,N);\r\n\t\tpoke(x_thresh,x_threshValue,i);\n\t}\r\n\t\r\n\t// subtract the threshold from the detection function and check that it is not less than 0\n\tfor (i = 0; i < N; i+=1)\n\t{\r\n\t\tonsetValue = peek(onsetDF, i);\r\n\t\tthreshValue = peek(x_thresh, i);\r\n\t\tthreshOnsetValue = onsetValue - threshValue; // x[i] = x[i] - x_thresh[i];\n\t\n\t\tif (threshOnsetValue < 0)\n\t\t{\n\t\t\tthreshOnsetValue = 0;\n\t\t}\r\n\t\tpoke(onsetDF, threshOnsetValue, i);\n\t}\r\n\t*/\r\n\t\r\n//_______________________________________________________________________________________________//\n\t// calculate auto-correlation function of detection function, TODO\n\t//calculateBalancedACF (resampledOnsetDF->onsetDF);\r\n\t\r\n//_______________________________________________________________________________________________//\n\t// calculate output of comb filterbank, after autocorrelation\r\n\t\r\n\t//calculateOutputOfCombFilterBank(combFilterBankOutput, acf, weightingVector);\r\n\t\n//_______________________________________________________________________________________________//\n\t// adaptive threshold on rcf\n\t//adaptiveThreshold (combFilterBankOutput,128);\r\n\t\r\n\t//adaptiveThreshold(combFilterBankOutput, 128, x_threshCombFilterBankOutput);\r\n\t\r\n\tt_index;\n\tt_index2;\n\t// calculate tempo observation vector from beat period observation vector\n\tfor (i = 0;i < 41;i+=1)\n\t{\n\t\tt_index = round (tempoToLagFactor / (((2*i)+80)));\n\t\tt_index2 = round (tempoToLagFactor / (((4*i)+160)));\n\t\tcombOut1 = peek(combFilterBankOutput, t_index-1);\r\n\t\tcombOut2 = peek(combFilterBankOutput, t_index2-1);\n\t\tcombOutValue = combOut1 + combOut2;\r\n\t\tpoke(tempoObservationVector, combOutValue, i);\n\t\t//tempoObservationVector[i] = combFilterBankOutput[t_index-1] + combFilterBankOutput[t_index2-1];\n\t}\r\n\t\r\n\tmaxval;\n\tmaxind;\n\tcurval;\n\t\n\t// if tempo is fixed then always use a fixed set of tempi as the previous observation probability function\n\tif (tempoFixed == 1)\n\t{\n\t\tfor (k = 0;k < 41;k+=1)\n\t\t{\r\n\t\t\tprevDeltaFixedValue = peek(prevDeltaFixed,k);\r\n\t\t\tpoke(prevDelta,prevDeltaFixedValue,k); \n\t\t\t//prevDelta[k] = prevDeltaFixed[k];\n\t\t}\n\t}\r\n\t\r\n\tfor (j=0;j < 41;j+=1)\n\t{\n\t\tmaxval = -1;\n\t\tfor (i = 0;i < 41;i+=1)\n\t\t{\r\n\t\t\tprevDeltaValue = peek(prevDelta, i);\r\n\t\t\t\r\n\t\t\tcurval = prevDeltaValue;\r\n\t\t\ttempoTMValue = peek(tempoTransitionMatrix,j); // ATTENTION\r\n\t\t\tcurval = prevDeltaValue * tempoTMValue;\n\t\t\t//curval = prevDelta[i] * tempoTransitionMatrix[i][j];\n\t\t\t\n\t\t\tif (curval > maxval)\n\t\t\t{\n\t\t\t\tmaxval = curval;\n\t\t\t}\n\t\t}\n\t\t\r\n\t\ttempoObsValue = peek(tempoObservationVector, j);\r\n\t\tpoke(finalDelta, maxval * tempoObsValue, j);\n\t\t//delta[j] = maxval * tempoObservationVector[j];\n\t}\r\n\t\r\n\tfinalDelta = normaliseArray(finalDelta, 41);\r\n\t\r\n\tmaxind = -1;\n\tmaxval = -1;\n\t\n\tfor (j=0;j < 41;j+=1)\n\t{\r\n\t\tpeekDelta = peek(finalDelta, j);\n\t\tif (peekDelta > maxval)\n\t\t{\n\t\t\tmaxval = peekDelta;\n\t\t\tmaxind = j;\r\n\t\t\tout8 = maxind;\n\t\t}\r\n\t\tpoke(prevDelta, peekDelta, j);\n\t}\r\n\t\r\n\tbeatPeriod = round ((60.0*44100.0)/(((2*maxind)+80)*(hopSize)));\n\t\n\tif (beatPeriod > 0)\n\t{\n\t\testimatedTempo = 60.0/(((hopSize) / 44100.0) * beatPeriod);\r\n\t\tout9= estimatedTempo;\n\t}\r\n\t\r\n\t\r\n\r\n}\r\n\r\n\r\n\r\nout1 = newSample;\r\nout2 = m0;\r\nout3 = beatCounter;\r\nout4 = writeIndexOnsetDF;\r\n\r\nout6 = onsetDFBufferSize;\r\nout7 = beatPeriod;\r\n\r\n\r\nout10= start;\r\nout11 = end;\r\nout12 = v;\r\nout13 = wcumscore;\r\nout14=max;\r\nout15=n;\r\nout16=latestCumulativeScoreValue;\r\nout17 = writeIndexCumulativeScore;\r\n\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
 									"id" : "obj-5",
 									"maxclass" : "codebox",
-									"numinlets" : 7,
+									"numinlets" : 10,
 									"numoutlets" : 19,
 									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" ],
-									"patching_rect" : [ 72.0, 65.0, 790.0, 590.0 ]
+									"patching_rect" : [ 72.0, 65.0, 988.0, 590.0 ]
 								}
 
 							}
@@ -1580,8 +1771,29 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-5", 7 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 9 ],
+									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-5", 5 ],
 									"source" : [ "obj-29", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 8 ],
+									"source" : [ "obj-3", 0 ]
 								}
 
 							}
@@ -1827,7 +2039,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "float" ],
 					"patching_rect" : [ 86.875, 963.0, 236.0, 22.0 ],
-					"sig" : 0.09332700642822
+					"sig" : 0.284776647537337
 				}
 
 			}
@@ -3231,8 +3443,36 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-84", 0 ],
+					"source" : [ "obj-101", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
 					"source" : [ "obj-103", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-84", 0 ],
+					"source" : [ "obj-105", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-84", 0 ],
+					"source" : [ "obj-107", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-128", 0 ],
+					"source" : [ "obj-108", 0 ]
 				}
 
 			}
@@ -3320,6 +3560,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-68", 0 ],
 					"source" : [ "obj-135", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-84", 0 ],
+					"source" : [ "obj-137", 0 ]
 				}
 
 			}
@@ -3531,6 +3778,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-102", 0 ],
+					"order" : 1,
+					"source" : [ "obj-33", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-108", 0 ],
+					"order" : 0,
 					"source" : [ "obj-33", 2 ]
 				}
 
@@ -3850,6 +4106,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
+					"order" : 1,
 					"source" : [ "obj-68", 6 ]
 				}
 
@@ -3932,6 +4189,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
+					"order" : 1,
 					"source" : [ "obj-68", 13 ]
 				}
 
@@ -3962,6 +4220,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-33", 7 ],
+					"order" : 0,
+					"source" : [ "obj-68", 13 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-33", 2 ],
 					"order" : 0,
 					"source" : [ "obj-68", 11 ]
@@ -3986,6 +4252,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-33", 8 ],
+					"order" : 0,
+					"source" : [ "obj-68", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-33", 3 ],
 					"order" : 0,
 					"source" : [ "obj-68", 5 ]
@@ -3994,7 +4268,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-33", 9 ],
+					"order" : 0,
+					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
+					"order" : 1,
 					"source" : [ "obj-68", 0 ]
 				}
 
