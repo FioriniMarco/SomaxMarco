@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-153",
+					"linecount" : 3,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1882.0, 54.1666659116745, 300.0, 49.0 ],
+					"text" : "realtime beat-tracker implemented by Marco Fiorini, based on btrack by Adam Stark https://github.com/adamstark/BTrack"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 3,
 					"id" : "obj-137",
 					"linecount" : 3,
@@ -9200,7 +9213,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "float" ],
 					"patching_rect" : [ 308.666646480560303, 1317.333336591720581, 97.0, 22.0 ],
-					"sig" : 0.108493909239769
+					"sig" : 0.0
 				}
 
 			}
