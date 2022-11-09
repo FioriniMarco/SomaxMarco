@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-99",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1192.0, 2110.5, 150.0, 60.0 ],
+					"text" : "looks like this gen should get activated a few seconds after the initial play"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-92",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1192.0, 2404.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-152",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -234,19 +258,6 @@
 , 			{
 				"box" : 				{
 					"format" : 6,
-					"id" : "obj-126",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1231.0, 2318.0, 50.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"format" : 6,
 					"id" : "obj-122",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
@@ -322,18 +333,6 @@
 					"patching_rect" : [ 293.0, 2193.0, 324.0, 147.0 ],
 					"range" : [ 0.0, 0.1 ],
 					"rounded" : 0.0
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-112",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1027.0, 2122.0, 70.0, 22.0 ],
-					"text" : "loadmess 1"
 				}
 
 			}
@@ -996,7 +995,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1401.0, 2961.0, 89.0, 89.0 ]
+					"patching_rect" : [ 1441.0, 3061.0, 89.0, 89.0 ]
 				}
 
 			}
@@ -2663,13 +2662,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-115", 0 ],
-					"source" : [ "obj-112", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-117", 0 ],
 					"midpoints" : [ 1036.5, 2256.0, 627.0, 2256.0, 627.0, 2178.0, 302.5, 2178.0 ],
 					"source" : [ "obj-113", 0 ]
@@ -3198,6 +3190,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-133", 0 ],
+					"source" : [ "obj-92", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-94", 0 ],
 					"source" : [ "obj-96", 0 ]
 				}
@@ -3223,7 +3222,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "autocorrelation.maxpat",
-				"bootpath" : "~/Desktop/Re_ beat tracker in gen",
+				"bootpath" : "~/Documents/GitHub/SomaxMarco/gen/Re_ beat tracker in gen",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -3242,14 +3241,14 @@
 			}
 , 			{
 				"name" : "pfft.complexdiff.gendsp",
-				"bootpath" : "~/Desktop/Re_ beat tracker in gen",
+				"bootpath" : "~/Documents/GitHub/SomaxMarco/gen/Re_ beat tracker in gen",
 				"patcherrelativepath" : ".",
 				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pfft.complexdiff.maxpat",
-				"bootpath" : "~/Desktop/Re_ beat tracker in gen",
+				"bootpath" : "~/Documents/GitHub/SomaxMarco/gen/Re_ beat tracker in gen",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
