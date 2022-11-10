@@ -40,6 +40,319 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-170",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 871.0, 1738.0, 93.0, 22.0 ],
+					"text" : "loadmess 0.001"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-169",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 723.0, 1410.0, 87.0, 22.0 ],
+					"text" : "loadmess 0.01"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-168",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1589.0, 754.5, 80.0, 22.0 ],
+					"text" : "loadmess 0.1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-166",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 814.0, 879.0, 80.0, 22.0 ],
+					"text" : "loadmess 0.1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-165",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 814.0, 1932.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-163",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 814.0, 1762.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-161",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 815.0, 1575.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-159",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 814.0, 1410.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-157",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 814.0, 1360.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-156",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 814.0, 1194.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-154",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 814.0, 906.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-151",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1474.0, 657.0, 150.0, 20.0 ],
+					"text" : "select buffer's channel"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-147",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1613.0, 717.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"contdata" : 1,
+					"id" : "obj-140",
+					"maxclass" : "multislider",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"orientation" : 0,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1424.0, 682.0, 200.0, 28.0 ],
+					"setminmax" : [ 1.0, 41.0 ],
+					"settype" : 0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-138",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1424.0, 754.5, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-137",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1424.0, 717.0, 177.0, 22.0 ],
+					"text" : "name tempoTransitionMatrix $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"buffername" : "tempoTransitionMatrix",
+					"id" : "obj-128",
+					"ignoreclick" : 1,
+					"labels" : 0,
+					"maxclass" : "waveform~",
+					"norulerclick" : 0,
+					"numinlets" : 5,
+					"numoutlets" : 6,
+					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
+					"patching_rect" : [ 1345.0, 790.5, 324.0, 78.0 ],
+					"ruler" : 0,
+					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
+					"voffset" : 1.0,
+					"vticks" : 0,
+					"vzoom" : 0.100000001490116,
+					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-129",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1345.0, 754.5, 65.0, 22.0 ],
+					"text" : "buftime 25"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-127",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1503.0, 1779.5, 150.0, 33.0 ],
+					"text" : "tempo probability distribution θb"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-125",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1015.0, 1977.0, 543.0, 33.0 ],
+					"text" : "The stored tempo likelihood ∆b−1 is multiplied by the transition matrix A \n\t\tand the maximum value from each column is taken to create a tempo probability distribution θb"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-123",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 467.0, 1678.0, 150.0, 33.0 ],
+					"text" : "previous tempo likelihood ∆b−1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"activebgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"activelinecolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"id" : "obj-97",
+					"maxclass" : "live.scope~",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1363.0, 1821.0, 324.0, 147.0 ],
+					"range" : [ 0.0, 0.01 ],
+					"rounded" : 0.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-106",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 1472.0, 1694.0, 31.0, 22.0 ],
+					"text" : "sig~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-107",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1472.0, 1668.0, 81.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-99",
 					"linecount" : 4,
 					"maxclass" : "comment",
@@ -65,11 +378,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-152",
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 230.0, 2518.0, 52.0, 20.0 ],
-					"text" : "max val"
+					"patching_rect" : [ 154.0, 2478.0, 128.0, 60.0 ],
+					"text" : "max ind\n\nindex of the maximum value of ∆b"
 				}
 
 			}
@@ -92,7 +406,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1189.0, 1779.5, 150.0, 33.0 ],
-					"text" : "this value should look like a gaussian"
+					"text" : "this value should look like a curve, not being steady"
 				}
 
 			}
@@ -291,7 +605,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 293.0, 2391.0, 324.0, 147.0 ],
-					"range" : [ 0.0, 0.3 ],
+					"range" : [ 0.0, 41.0 ],
 					"rounded" : 0.0
 				}
 
@@ -393,7 +707,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 302.0, 111.0, 1023.0, 745.0 ],
+						"rect" : [ 383.0, 93.0, 1023.0, 745.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -456,7 +770,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\n\r\n\r\nHistory peekDeltaNormalised(0.);\r\nHistory beatPeriod(0.);\r\nHistory estimatedTempo(0.);\r\n\r\n\r\nmaxind = -1;\nmaxval = -1;\n\t\nfor (j=0;j < 41;j+=1)\n{\r\n\tpeekDeltaNormalised = peek(deltaNormalised, j);\n\tif (peekDeltaNormalised > maxval)\n\t{\n\t\tmaxval = peekDeltaNormalised;\n\t\tmaxind = j;\n\t}\r\n\tpoke(prevDelta, peekDeltaNormalised, j);\r\n\tout1 = peekDeltaNormalised;\r\n\tout2 = maxval;\n}\r\n\r\nbeatPeriod = round ((60.0*44100.0)/(((2*maxind)+80)*(512)));\n\t\r\n\nif (beatPeriod > 0)\n{\n\testimatedTempo = 60.0/(((512) / 44100.0) * beatPeriod);\r\n}\r\n\r\nout3 = beatPeriod;\r\nout4 = estimatedTempo;\r\n",
+									"code" : "\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\n\r\n\r\nHistory peekDeltaNormalised(0.);\r\nHistory beatPeriod(0.);\r\nHistory estimatedTempo(0.);\r\n\r\n\r\nmaxind = -1;\nmaxval = -1;\n\t\nfor (j=0;j < 41;j+=1)\n{\r\n\tpeekDeltaNormalised = peek(deltaNormalised, j);\n\tif (peekDeltaNormalised > maxval)\n\t{\n\t\tmaxval = peekDeltaNormalised;\n\t\tmaxind = j;\n\t}\r\n\tpoke(prevDelta, peekDeltaNormalised, j);\r\n\tout1 = peekDeltaNormalised;\r\n\tout2 = maxind;\n}\r\n\r\nbeatPeriod = round ((60.0*44100.0)/(((2*maxind)+80)*(512)));\n\t\r\n\nif (beatPeriod > 0)\n{\n\testimatedTempo = 60.0/(((512) / 44100.0) * beatPeriod);\r\n}\r\n\r\nout3 = beatPeriod;\r\nout4 = estimatedTempo;\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -579,7 +893,7 @@
 					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
 					"voffset" : 1.0,
 					"vticks" : 0,
-					"vzoom" : 2.0,
+					"vzoom" : 0.100000001490116,
 					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -613,7 +927,7 @@
 					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
 					"voffset" : 1.0,
 					"vticks" : 0,
-					"vzoom" : 2.0,
+					"vzoom" : 0.100000001490116,
 					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -647,7 +961,7 @@
 					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
 					"voffset" : 1.0,
 					"vticks" : 0,
-					"vzoom" : 2.0,
+					"vzoom" : 0.001000000047497,
 					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -757,7 +1071,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 251.0, 107.0, 1023.0, 745.0 ],
+						"rect" : [ 84.0, 87.0, 937.0, 745.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -809,7 +1123,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "normaliseArray (array, N, arrayOut)\n{\n\tsum = 0;\r\n\tnormalisedValue = 0;\n\t\n\tfor (i = 0; i < N; i+=1)\n\t{\r\n\t\tpeekedValue = peek(array, i);\n\t\tif (peekedValue  > 0)\n\t\t{\n\t\t\tsum = sum + peekedValue ;\n\t\t}\n\t}\n\t\n\tif (sum > 0)\n\t{\n\t\tfor (i = 0; i < N; i+=1)\n\t\t{\r\n\t\t\tpeekedValue = peek(array, i);\r\n\t\t\tnormalisedValue = peekedValue/sum;\r\n\t\t\tpoke(arrayOut, normalisedValue, i); // array[i] = array[i] / sum;\n\t\t}\n\t}\r\n\treturn normalisedValue;\n}\r\n\r\nParam tempoToLagFactor(60.*44100./512.);\r\n\r\nBuffer combFilterBankOutput(\"combFilterBankOutput\"); //unused\r\nBuffer tempoObservationVector(\"tempoObservationVector\");\r\nBuffer comb_after_thresh(\"comb_after_thresh\");\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer finalDelta(\"finalDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\n\r\n\r\nHistory deltaNorm(0);\r\nHistory tempoTMValue(0);\r\n\r\nfor (j=0;j < 41;j+=1)\n{\n\tmaxval = -1;\n\tfor (i = 0;i < 41;i+=1)\n\t{\r\n\t\tprevDeltaValue = peek(prevDelta, i);\r\n\t\ttempoTMValue = peek(tempoTransitionMatrix,i,j); // ATTENTION!!!\r\n\t\tout2 = tempoTMValue;\r\n\t\t//poke(tempoTMval, tempoTMValue, i);\r\n\t\tcurval = prevDeltaValue * tempoTMValue; //curval = prevDelta[i] * tempoTransitionMatrix[i][j];\n\t\t\n\t\tif (curval > maxval)\n\t\t{\n\t\t\tmaxval = curval;\n\t\t}\r\n\t\t//poke(curValue, curval);\n\t}\n\t\t\r\n\ttempoObsValue = peek(tempoObservationVector, j);\r\n\tvalueToPoke = maxval * tempoObsValue;\r\n\tout3 = valueToPoke;\r\n\tpoke(finalDelta, valueToPoke, j);\r\n}\r\n\t\r\ndeltaNorm = normaliseArray(finalDelta, 41, deltaNormalised);\r\nout1 = deltaNorm;\r\n",
+									"code" : "normaliseArray (array, N, arrayOut)\n{\n\tsum = 0;\r\n\tnormalisedValue = 0;\n\t\n\tfor (i = 0; i < N; i+=1)\n\t{\r\n\t\tpeekedValue = peek(array, i);\n\t\tif (peekedValue  > 0)\n\t\t{\n\t\t\tsum = sum + peekedValue ;\n\t\t}\n\t}\n\t\n\tif (sum > 0)\n\t{\n\t\tfor (i = 0; i < N; i+=1)\n\t\t{\r\n\t\t\tpeekedValue = peek(array, i);\r\n\t\t\tnormalisedValue = peekedValue/sum;\r\n\t\t\tpoke(arrayOut, normalisedValue, i); // array[i] = array[i] / sum;\n\t\t}\n\t}\r\n\treturn normalisedValue;\n}\r\n\r\nParam tempoToLagFactor(60.*44100./512.);\r\n\r\nBuffer combFilterBankOutput(\"combFilterBankOutput\"); //unused\r\nBuffer tempoObservationVector(\"tempoObservationVector\");\r\nBuffer comb_after_thresh(\"comb_after_thresh\");\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer finalDelta(\"finalDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\n\r\n\r\nHistory deltaNorm(0);\r\nHistory tempoTMValue(0);\r\nHistory prevDeltaValue(0);\r\nHistory curval(0);\r\nHistory maxval(-1);\r\n\r\nfor (j=0;j < 41;j+=1)\n{\n\tmaxval = -1;\n\tfor (i = 0;i < 41;i+=1)\n\t{\r\n\t\t// read prevDelta[i]\r\n\t\tprevDeltaValue = peek(prevDelta, i); // At each step, we store the previous tempo likelihood ∆b−1\r\n\t\t\r\n\t\t// read tempoTransitionMatrix[i][j]\r\n\t\ttempoTMValue = peek(tempoTransitionMatrix,j,i); // columns i = channel, row j = index\r\n\t\t\r\n\t\t// The stored tempo likelihood ∆b−1 is multiplied by the transition matrix A \r\n\t\t// and the maximum value from each column is taken to create a tempo probability distribution θb\r\n\t\t\r\n\t\tcurval = prevDeltaValue * tempoTMValue; //curval = prevDelta[i] * tempoTransitionMatrix[i][j];\n\t\t\n\t\tif (curval > maxval)\n\t\t{\n\t\t\tmaxval = curval; // tempo probability distribution θb\r\n\t\t\t\n\t\t}\n\t}\r\n\ttempoObsValue = peek(tempoObservationVector, j); // current tempo domain combfilterbank output R_b\r\n\tvalueToPoke = maxval * tempoObsValue; // tempo likelihood for current iteration ∆b\r\n\tout3 = maxval;\r\n\tpoke(finalDelta, valueToPoke, j);\r\n}\r\n\r\nout2 = tempoTMValue;\r\n\t\r\ndeltaNorm = normaliseArray(finalDelta, 41, deltaNormalised);\r\nout1 = deltaNorm;\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -889,7 +1203,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 1074.0, 827.0, 252.0, 22.0 ],
+					"patching_rect" : [ 1073.0, 840.0, 252.0, 22.0 ],
 					"text" : "buffer~ tempoTransitionMatrix @samps 41 41"
 				}
 
@@ -1002,11 +1316,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-93",
+					"linecount" : 8,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 139.0, 1524.0, 143.0, 20.0 ],
-					"text" : "tempoObservationVector"
+					"patching_rect" : [ 139.0, 1430.0, 143.0, 114.0 ],
+					"text" : "tempoObservationVector\n\nWe map the output of the comb filterbank R(l) from the lag domain to the tempo domain between tmin and tmax to give Rb(t)"
 				}
 
 			}
@@ -1042,7 +1357,7 @@
 					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
 					"voffset" : 1.0,
 					"vticks" : 0,
-					"vzoom" : 2.0,
+					"vzoom" : 0.009999999776483,
 					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -1308,7 +1623,7 @@
 					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
 					"voffset" : 1.0,
 					"vticks" : 0,
-					"vzoom" : 2.0,
+					"vzoom" : 0.009999999776483,
 					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -1342,7 +1657,7 @@
 					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
 					"voffset" : 1.0,
 					"vticks" : 0,
-					"vzoom" : 2.0,
+					"vzoom" : 0.100000001490116,
 					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -1572,7 +1887,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1096.5, 741.5, 189.0, 47.0 ],
+					"patching_rect" : [ 1095.5, 754.5, 189.0, 47.0 ],
 					"text" : "cretes Rayleigh weighting vector, used in the comb filterbank\nand tempo transition matrix"
 				}
 
@@ -1608,7 +1923,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1027.0, 754.0, 58.0, 22.0 ],
+					"patching_rect" : [ 1026.0, 767.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -1796,7 +2111,7 @@
 					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
 					"voffset" : 1.0,
 					"vticks" : 0,
-					"vzoom" : 2.0,
+					"vzoom" : 0.100000001490116,
 					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -1821,7 +2136,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1027.0, 786.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1026.0, 799.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -1832,7 +2147,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 1074.0, 794.0, 208.0, 22.0 ],
+					"patching_rect" : [ 1073.0, 807.0, 208.0, 22.0 ],
 					"text" : "buffer~ weightingVector @samps 128"
 				}
 
@@ -1856,7 +2171,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 258.0, 106.0, 1002.0, 760.0 ],
+						"rect" : [ 208.0, 87.0, 1002.0, 760.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1925,7 +2240,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 1027.0, 820.0, 29.5, 22.0 ],
+					"patching_rect" : [ 1026.0, 833.0, 29.5, 22.0 ],
 					"text" : "gen"
 				}
 
@@ -2574,23 +2889,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-97", 0 ],
+					"midpoints" : [ 1481.5, 1806.0, 1372.5, 1806.0 ],
+					"source" : [ "obj-106", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-106", 0 ],
+					"source" : [ "obj-107", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-103", 0 ],
-					"order" : 7,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"order" : 9,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
 					"order" : 8,
 					"source" : [ "obj-11", 0 ]
 				}
@@ -2598,55 +2912,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-43", 0 ],
-					"order" : 6,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"order" : 10,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-68", 0 ],
-					"order" : 4,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-70", 0 ],
-					"order" : 5,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-85", 0 ],
-					"order" : 1,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-87", 0 ],
-					"order" : 3,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-91", 0 ],
+					"destination" : [ "obj-129", 0 ],
+					"midpoints" : [ 649.5, 222.0, 627.0, 222.0, 627.0, 735.0, 1200.0, 735.0, 1200.0, 741.0, 1354.5, 741.0 ],
 					"order" : 0,
 					"source" : [ "obj-11", 0 ]
 				}
@@ -2654,8 +2921,80 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-96", 0 ],
+					"destination" : [ "obj-14", 0 ],
+					"order" : 10,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"order" : 9,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
+					"order" : 7,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"order" : 11,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-68", 0 ],
+					"order" : 5,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-70", 0 ],
+					"order" : 6,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-85", 0 ],
 					"order" : 2,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-87", 0 ],
+					"order" : 4,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-91", 0 ],
+					"order" : 1,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-96", 0 ],
+					"order" : 3,
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -2699,6 +3038,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-121", 0 ],
+					"midpoints" : [ 1059.166666666666742, 2202.0, 1240.5, 2202.0 ],
 					"source" : [ "obj-116", 2 ]
 				}
 
@@ -2706,6 +3046,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-122", 0 ],
+					"midpoints" : [ 1070.5, 2202.0, 1116.0, 2202.0, 1116.0, 2265.0, 1218.0, 2265.0, 1218.0, 2238.0, 1240.5, 2238.0 ],
 					"source" : [ "obj-116", 3 ]
 				}
 
@@ -2745,6 +3086,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-130", 0 ],
 					"source" : [ "obj-122", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-128", 0 ],
+					"source" : [ "obj-129", 0 ]
 				}
 
 			}
@@ -2794,8 +3142,41 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-128", 0 ],
+					"midpoints" : [ 1433.5, 741.0, 1332.0, 741.0, 1332.0, 786.0, 1354.5, 786.0 ],
+					"source" : [ "obj-137", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-128", 0 ],
+					"midpoints" : [ 1433.5, 777.0, 1354.5, 777.0 ],
+					"source" : [ "obj-138", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-137", 0 ],
+					"order" : 1,
+					"source" : [ "obj-140", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-147", 0 ],
+					"midpoints" : [ 1433.5, 711.0, 1622.5, 711.0 ],
+					"order" : 0,
+					"source" : [ "obj-140", 0 ]
 				}
 
 			}
@@ -2816,8 +3197,121 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"midpoints" : [ 823.5, 930.0, 705.0, 930.0, 705.0, 957.0, 649.5, 957.0 ],
+					"source" : [ "obj-154", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"midpoints" : [ 823.5, 1218.0, 627.0, 1218.0, 627.0, 1107.0, 649.5, 1107.0 ],
+					"source" : [ "obj-156", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"source" : [ "obj-157", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-86", 0 ],
+					"source" : [ "obj-159", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-94", 0 ],
+					"source" : [ "obj-161", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-77", 0 ],
+					"source" : [ "obj-163", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-90", 0 ],
+					"source" : [ "obj-165", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-154", 0 ],
+					"order" : 3,
+					"source" : [ "obj-166", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-156", 0 ],
+					"order" : 2,
+					"source" : [ "obj-166", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-161", 0 ],
+					"order" : 0,
+					"source" : [ "obj-166", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-165", 0 ],
+					"order" : 1,
+					"source" : [ "obj-166", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-138", 0 ],
+					"source" : [ "obj-168", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-157", 0 ],
+					"order" : 1,
+					"source" : [ "obj-169", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-159", 0 ],
+					"order" : 0,
+					"source" : [ "obj-169", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
 					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-163", 0 ],
+					"source" : [ "obj-170", 0 ]
 				}
 
 			}
@@ -3022,6 +3516,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
 					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-107", 0 ],
+					"midpoints" : [ 1070.5, 1662.0, 1200.0, 1662.0, 1200.0, 1620.0, 1481.5, 1620.0 ],
+					"source" : [ "obj-59", 2 ]
 				}
 
 			}
