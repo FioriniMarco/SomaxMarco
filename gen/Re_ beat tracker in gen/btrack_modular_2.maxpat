@@ -40,6 +40,450 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-180",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1801.0, 1256.5, 70.0, 22.0 ],
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-175",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1632.5, 2162.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-176",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1458.5, 2153.5, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"buffername" : "beatP",
+					"id" : "obj-177",
+					"ignoreclick" : 1,
+					"labels" : 0,
+					"maxclass" : "waveform~",
+					"norulerclick" : 0,
+					"numinlets" : 5,
+					"numoutlets" : 6,
+					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
+					"patching_rect" : [ 1458.5, 2223.5, 324.0, 78.0 ],
+					"ruler" : 0,
+					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
+					"voffset" : 1.0,
+					"vticks" : 0,
+					"vzoom" : 50.0,
+					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-178",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1458.5, 2187.5, 65.0, 22.0 ],
+					"text" : "buftime 25"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-179",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 1641.5, 2193.0, 141.0, 22.0 ],
+					"text" : "buffer~ beatP @samps 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-174",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1234.5, 1793.0, 104.0, 20.0 ],
+					"text" : "tempoTMValue A"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-172",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1821.5, 1321.0, 175.0, 33.0 ],
+					"text" : "extract tempoTransitionMatrixValues"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-124",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1964.0, 1412.5, 24.0, 20.0 ],
+					"text" : "i"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-126",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1876.0, 1412.5, 24.0, 20.0 ],
+					"text" : "j"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-131",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1747.0, 1256.5, 35.0, 22.0 ],
+					"text" : "reset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-143",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1964.0, 1388.5, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-149",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1876.0, 1388.5, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "active",
+					"id" : "obj-153",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1801.0, 1287.5, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-155",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1747.0, 1287.5, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"activebgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"activelinecolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"id" : "obj-158",
+					"maxclass" : "live.scope~",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1747.0, 1444.5, 324.0, 147.0 ],
+					"range" : [ 0.0, 0.1 ],
+					"rounded" : 0.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-160",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 1747.0, 1412.5, 31.0, 22.0 ],
+					"text" : "sig~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-162",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1747.0, 1388.5, 81.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.890196078431372, 0.027450980392157, 0.027450980392157, 1.0 ],
+					"id" : "obj-164",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "float", "float", "float" ],
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 8,
+							"minor" : 5,
+							"revision" : 1,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "dsp.gen",
+						"rect" : [ 944.0, -1320.0, 963.0, 733.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 882.0, 655.0, 35.0, 22.0 ],
+									"text" : "out 3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 468.5, 655.0, 35.0, 22.0 ],
+									"text" : "out 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"code" : "\r\nHistory tempoTMValue(0.);\r\nHistory i(0);\r\nHistory j(0);\r\n\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\nBuffer matrixValue(\"matrixValue\");\r\n\r\n\r\nif(i < 41)\r\n{\r\n\ttempoTMValue = peek(tempoTransitionMatrix, j, i); // columns i = channel, row j = index\r\n\tpoke(matrixValue, tempoTMValue);\r\n\tout1 = tempoTMValue;\r\n\ti += 1;\r\n\t\t\t\r\n} else{\r\n\r\n\tj += 1;\r\n\ti = 0;\t\r\n\r\n\tif(j > 41)\r\n\t{\r\n\t\tj = 0;\r\n\t}\t\r\n}\r\n\t\r\nout2 = j;\r\nout3 = i;",
+									"fontface" : 0,
+									"fontname" : "<Monospaced>",
+									"fontsize" : 12.0,
+									"id" : "obj-5",
+									"maxclass" : "codebox",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 55.0, 68.0, 846.0, 551.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 55.0, 22.0, 28.0, 22.0 ],
+									"text" : "in 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 55.0, 655.0, 35.0, 22.0 ],
+									"text" : "out 1"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-5", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-5", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+ ]
+					}
+,
+					"patching_rect" : [ 1747.0, 1326.5, 53.0, 22.0 ],
+					"text" : "gen"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-40",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1925.5, 1624.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-108",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1752.0, 1609.5, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"buffername" : "matrixValue",
+					"id" : "obj-110",
+					"ignoreclick" : 1,
+					"labels" : 0,
+					"maxclass" : "waveform~",
+					"norulerclick" : 0,
+					"numinlets" : 5,
+					"numoutlets" : 6,
+					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
+					"patching_rect" : [ 1752.0, 1679.5, 324.0, 78.0 ],
+					"ruler" : 0,
+					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
+					"voffset" : 1.0,
+					"vticks" : 0,
+					"vzoom" : 0.100000001490116,
+					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-111",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1752.0, 1643.5, 65.0, 22.0 ],
+					"text" : "buftime 25"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-112",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 1902.5, 1651.5, 173.0, 22.0 ],
+					"text" : "buffer~ matrixValue @samps 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-170",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -321,7 +765,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 1363.0, 1821.0, 324.0, 147.0 ],
-					"range" : [ 0.0, 0.01 ],
+					"range" : [ 0.0, 0.08 ],
 					"rounded" : 0.0
 				}
 
@@ -400,18 +844,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-148",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1189.0, 1779.5, 150.0, 33.0 ],
-					"text" : "this value should look like a curve, not being steady"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"activebgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"activelinecolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"id" : "obj-146",
@@ -434,18 +866,6 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 1124.0, 1694.0, 31.0, 22.0 ],
 					"text" : "sig~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-144",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1213.0, 1633.0, 150.0, 60.0 ],
-					"text" : "I believe there is a problem in reading the correct value out of the tempo transition matrix!!!"
 				}
 
 			}
@@ -707,7 +1127,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 383.0, 93.0, 1023.0, 745.0 ],
+						"rect" : [ 383.0, 92.0, 1023.0, 745.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -770,7 +1190,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\n\r\n\r\nHistory peekDeltaNormalised(0.);\r\nHistory beatPeriod(0.);\r\nHistory estimatedTempo(0.);\r\n\r\n\r\nmaxind = -1;\nmaxval = -1;\n\t\nfor (j=0;j < 41;j+=1)\n{\r\n\tpeekDeltaNormalised = peek(deltaNormalised, j);\n\tif (peekDeltaNormalised > maxval)\n\t{\n\t\tmaxval = peekDeltaNormalised;\n\t\tmaxind = j;\n\t}\r\n\tpoke(prevDelta, peekDeltaNormalised, j);\r\n\tout1 = peekDeltaNormalised;\r\n\tout2 = maxind;\n}\r\n\r\nbeatPeriod = round ((60.0*44100.0)/(((2*maxind)+80)*(512)));\n\t\r\n\nif (beatPeriod > 0)\n{\n\testimatedTempo = 60.0/(((512) / 44100.0) * beatPeriod);\r\n}\r\n\r\nout3 = beatPeriod;\r\nout4 = estimatedTempo;\r\n",
+									"code" : "\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\nBuffer beatP(\"beatP\");\r\n\r\n\r\nHistory peekDeltaNormalised(0.);\r\nHistory beatPeriod(0.);\r\nHistory estimatedTempo(0.);\r\n\r\n\r\nmaxind = -1;\nmaxval = -1;\n\t\nfor (j=0;j < 41;j+=1)\n{\r\n\tpeekDeltaNormalised = peek(deltaNormalised, j);\n\tif (peekDeltaNormalised > maxval)\n\t{\n\t\tmaxval = peekDeltaNormalised;\n\t\tmaxind = j;\n\t}\r\n\tpoke(prevDelta, peekDeltaNormalised, j);\r\n\tout1 = peekDeltaNormalised;\r\n\tout2 = maxind;\n}\r\n\r\nbeatPeriod = round ((60.0*44100.0)/(((2*maxind)+80)*(512)));\r\npoke(beatP, beatPeriod);\n\t\r\n\nif (beatPeriod > 0)\n{\n\testimatedTempo = 60.0/(((512) / 44100.0) * beatPeriod);\r\n}\r\n\r\nout3 = beatPeriod;\r\nout4 = estimatedTempo;\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -1123,7 +1543,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "normaliseArray (array, N, arrayOut)\n{\n\tsum = 0;\r\n\tnormalisedValue = 0;\n\t\n\tfor (i = 0; i < N; i+=1)\n\t{\r\n\t\tpeekedValue = peek(array, i);\n\t\tif (peekedValue  > 0)\n\t\t{\n\t\t\tsum = sum + peekedValue ;\n\t\t}\n\t}\n\t\n\tif (sum > 0)\n\t{\n\t\tfor (i = 0; i < N; i+=1)\n\t\t{\r\n\t\t\tpeekedValue = peek(array, i);\r\n\t\t\tnormalisedValue = peekedValue/sum;\r\n\t\t\tpoke(arrayOut, normalisedValue, i); // array[i] = array[i] / sum;\n\t\t}\n\t}\r\n\treturn normalisedValue;\n}\r\n\r\nParam tempoToLagFactor(60.*44100./512.);\r\n\r\nHistory deltaNorm(0);\r\nHistory tempoTMValue(0);\r\nHistory prevDeltaValue(0);\r\nHistory curval(0);\r\nHistory maxval(-1);\r\n\r\nBuffer combFilterBankOutput(\"combFilterBankOutput\"); //unused\r\nBuffer tempoObservationVector(\"tempoObservationVector\");\r\nBuffer comb_after_thresh(\"comb_after_thresh\");\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer finalDelta(\"finalDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\n\r\n\r\n\r\n\r\nfor (j=0;j < 41;j+=1)\n{\n\tmaxval = -1;\n\tfor (i = 0;i < 41;i+=1)\n\t{\r\n\t\t// read prevDelta[i]\r\n\t\tprevDeltaValue = peek(prevDelta, i); // At each step, we store the previous tempo likelihood ∆b−1\r\n\t\t\r\n\t\t// read tempoTransitionMatrix[i][j]\r\n\t\ttempoTMValue = peek(tempoTransitionMatrix,j,i); // columns i = channel, row j = index\r\n\t\tout2 = tempoTMValue;\r\n\t\t// The stored tempo likelihood ∆b−1 is multiplied by the transition matrix A \r\n\t\t// and the maximum value from each column is taken to create a tempo probability distribution θb\r\n\t\t\r\n\t\tcurval = prevDeltaValue * tempoTMValue; //curval = prevDelta[i] * tempoTransitionMatrix[i][j];\n\t\t\n\t\tif (curval > maxval)\n\t\t{\n\t\t\tmaxval = curval; // tempo probability distribution θb\r\n\t\t\t\n\t\t}\n\t}\r\n\ttempoObsValue = peek(tempoObservationVector, j); // current tempo domain combfilterbank output R_b\r\n\tvalueToPoke = maxval * tempoObsValue; // tempo likelihood for current iteration ∆b\r\n\tout3 = maxval;\r\n\tpoke(finalDelta, valueToPoke, j);\r\n}\r\n\r\n\r\n\t\r\ndeltaNorm = normaliseArray(finalDelta, 41, deltaNormalised);\r\nout1 = deltaNorm;\r\n",
+									"code" : "normaliseArray (array, N, arrayOut)\n{\n\tsum = 0;\r\n\tnormalisedValue = 0;\n\t\n\tfor (i = 0; i < N; i+=1)\n\t{\r\n\t\tpeekedValue = peek(array, i);\n\t\tif (peekedValue  > 0)\n\t\t{\n\t\t\tsum = sum + peekedValue ;\n\t\t}\n\t}\n\t\n\tif (sum > 0)\n\t{\n\t\tfor (i = 0; i < N; i+=1)\n\t\t{\r\n\t\t\tpeekedValue = peek(array, i);\r\n\t\t\tnormalisedValue = peekedValue/sum;\r\n\t\t\tpoke(arrayOut, normalisedValue, i); // array[i] = array[i] / sum;\n\t\t}\n\t}\r\n\treturn normalisedValue;\n}\r\n\r\nParam tempoToLagFactor(60.*44100./512.);\r\n\r\nHistory deltaNorm(0);\r\nHistory tempoTMValue(0);\r\nHistory prevDeltaValue(0);\r\nHistory curval(0);\r\nHistory maxval(-1);\r\n\r\nBuffer combFilterBankOutput(\"combFilterBankOutput\"); //unused\r\nBuffer tempoObservationVector(\"tempoObservationVector\");\r\nBuffer comb_after_thresh(\"comb_after_thresh\");\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\nBuffer prevDelta(\"prevDelta\");\r\nBuffer finalDelta(\"finalDelta\");\r\nBuffer deltaNormalised(\"deltaNormalised\");\r\nBuffer matrixValue(\"matrixValue\");\r\n\r\n\r\n\r\n\r\nfor (j=0;j < 41;j+=1)\n{\n\tmaxval = -1;\n\tfor (i = 0;i < 41;i+=1)\n\t{\r\n\t\t// read prevDelta[i]\r\n\t\tprevDeltaValue = peek(prevDelta, i); // At each step, we store the previous tempo likelihood ∆b−1\r\n\t\t\r\n\t\t// read tempoTransitionMatrix[i][j]\r\n\t\ttempoTMValue = peek(matrixValue); // columns i = channel, row j = index\r\n\t\tout2 = tempoTMValue;\r\n\t\t// The stored tempo likelihood ∆b−1 is multiplied by the transition matrix A \r\n\t\t// and the maximum value from each column is taken to create a tempo probability distribution θb\r\n\t\t\r\n\t\tcurval = prevDeltaValue * tempoTMValue; //curval = prevDelta[i] * tempoTransitionMatrix[i][j];\n\t\t\n\t\tif (curval > maxval)\n\t\t{\n\t\t\tmaxval = curval; // tempo probability distribution θb\r\n\t\t\t\n\t\t}\n\t}\r\n\ttempoObsValue = peek(tempoObservationVector, j); // current tempo domain combfilterbank output R_b\r\n\tvalueToPoke = maxval * tempoObsValue; // tempo likelihood for current iteration ∆b\r\n\tout3 = maxval;\r\n\tpoke(finalDelta, valueToPoke, j);\r\n}\r\n\r\n\r\n\t\r\ndeltaNorm = normaliseArray(finalDelta, 41, deltaNormalised);\r\nout1 = deltaNorm;\r\n",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -2904,6 +3324,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-111", 0 ],
+					"source" : [ "obj-108", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-103", 0 ],
 					"order" : 8,
 					"source" : [ "obj-11", 0 ]
@@ -2996,6 +3423,13 @@
 					"destination" : [ "obj-96", 0 ],
 					"order" : 3,
 					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-110", 0 ],
+					"source" : [ "obj-111", 0 ]
 				}
 
 			}
@@ -3105,6 +3539,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-164", 0 ],
+					"source" : [ "obj-131", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-133", 1 ],
 					"source" : [ "obj-132", 0 ]
 				}
@@ -3197,9 +3638,23 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-164", 0 ],
+					"source" : [ "obj-153", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"midpoints" : [ 823.5, 930.0, 705.0, 930.0, 705.0, 957.0, 649.5, 957.0 ],
 					"source" : [ "obj-154", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-164", 0 ],
+					"source" : [ "obj-155", 0 ]
 				}
 
 			}
@@ -3227,6 +3682,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-158", 0 ],
+					"midpoints" : [ 1756.5, 1429.5, 1756.5, 1429.5 ],
+					"source" : [ "obj-160", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-94", 0 ],
 					"source" : [ "obj-161", 0 ]
 				}
@@ -3234,8 +3697,36 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-160", 0 ],
+					"source" : [ "obj-162", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-77", 0 ],
 					"source" : [ "obj-163", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-143", 0 ],
+					"source" : [ "obj-164", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-149", 0 ],
+					"source" : [ "obj-164", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-162", 0 ],
+					"source" : [ "obj-164", 0 ]
 				}
 
 			}
@@ -3317,8 +3808,36 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-177", 0 ],
+					"source" : [ "obj-175", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-178", 0 ],
+					"source" : [ "obj-176", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-177", 0 ],
+					"source" : [ "obj-178", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-153", 0 ],
+					"source" : [ "obj-180", 0 ]
 				}
 
 			}
@@ -3430,6 +3949,13 @@
 					"destination" : [ "obj-4", 0 ],
 					"order" : 1,
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-110", 0 ],
+					"source" : [ "obj-40", 0 ]
 				}
 
 			}
