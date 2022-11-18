@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -224.0, -1226.0, 1206.0, 800.0 ],
+		"rect" : [ -209.0, -1233.0, 1206.0, 800.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,123 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1029.0, 78.5, 102.0, 20.0 ],
+					"text" : "which clock rate?"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "interval",
+					"id" : "obj-44",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 875.0, 77.5, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 875.0, 147.5, 99.0, 20.0 ],
+					"text" : "with if + counter"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 516.0, 147.5, 77.0, 20.0 ],
+					"text" : "with for loop"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "vzoom",
+					"id" : "obj-32",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 578.0, 551.5, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 462.0, 547.0, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"buffername" : "matrixValueFor",
+					"id" : "obj-34",
+					"ignoreclick" : 1,
+					"labels" : 0,
+					"maxclass" : "waveform~",
+					"norulerclick" : 0,
+					"numinlets" : 5,
+					"numoutlets" : 6,
+					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
+					"patching_rect" : [ 462.0, 617.0, 324.0, 78.0 ],
+					"ruler" : 0,
+					"selectioncolor" : [ 0.929411764705882, 0.929411764705882, 0.352941176470588, 0.0 ],
+					"voffset" : 1.0,
+					"vticks" : 0,
+					"vzoom" : 0.100000001490116,
+					"waveformcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-35",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 462.0, 581.0, 65.0, 22.0 ],
+					"text" : "buftime 25"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 578.0, 581.0, 191.0, 22.0 ],
+					"text" : "buffer~ matrixValueFor @samps 1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"attr" : "vzoom",
 					"id" : "obj-14",
@@ -251,7 +368,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 944.0, -1320.0, 963.0, 733.0 ],
+						"rect" : [ 612.0, 107.0, 963.0, 733.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -405,7 +522,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 456.5, 72.5, 35.0, 22.0 ],
+					"patching_rect" : [ 462.0, 77.5, 35.0, 22.0 ],
 					"text" : "reset"
 				}
 
@@ -518,7 +635,7 @@
 						}
 ,
 						"classnamespace" : "dsp.gen",
-						"rect" : [ 76.0, -1294.0, 963.0, 733.0 ],
+						"rect" : [ 1056.0, -1228.0, 963.0, 733.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -570,7 +687,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "\r\nHistory tempoTMValue(0.);\r\nHistory i(0);\r\nHistory j(0);\r\n\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\n\r\n\r\nif(j < 41)\r\n{\r\n\tif(i < 41)\r\n\t{\r\n\t\ttempoTMValue = peek(tempoTransitionMatrix, j, i); // columns i = channel, row j = index\r\n\t\tout1 = tempoTMValue;\r\n\t\ti += 1;\r\n\t\t\r\n\t} else{\r\n\t\ti = 0;\t\t\r\n\t}\r\n\t\r\n\tj += 1;\r\n\r\n} else{\r\n\t\r\n\t\r\n}\r\n\r\nj = 0;\r\n\r\n\r\nout2 = j;\r\nout3 = i;\r\n\t",
+									"code" : "\r\nHistory tempoTMValue(0.);\r\nHistory i(0);\r\nHistory j(0);\r\n\r\nBuffer tempoTransitionMatrix(\"tempoTransitionMatrix\");\r\nBuffer matrixValueFor(\"matrixValueFor\");\r\n\r\n\r\n\r\n\r\n\r\nfor (j=0;j < 41;j+=1)\n{\n\t\n\tfor (i = 0;i < 41;i+=1)\n\t{\r\n\t\t\r\n\t\ttempoTMValue = peek(tempoTransitionMatrix,j,i); // columns i = channel, row j = index\r\n\t\tpoke(matrixValueFor, tempoTMValue);\r\n\t\tout1 = tempoTMValue;\n\t}\r\n\t\r\n\tout2 = j;\r\n\tout3 = i;\r\n\t\r\n}\r\n\r\n\r\n\r\n\t",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -999,6 +1116,27 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"midpoints" : [ 151.5, 255.0, 340.5, 255.0 ],
 					"order" : 0,
@@ -1018,6 +1156,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-38", 0 ],
 					"source" : [ "obj-41", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"source" : [ "obj-44", 0 ]
 				}
 
 			}
